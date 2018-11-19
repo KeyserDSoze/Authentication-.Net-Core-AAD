@@ -16,7 +16,8 @@ namespace AuthenticationCore.WebApp.ActiveDirectoryBase.Controllers
         {
             return View();
         }
-
+        //Allow to see this one to everyone.
+        [AllowAnonymous]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
