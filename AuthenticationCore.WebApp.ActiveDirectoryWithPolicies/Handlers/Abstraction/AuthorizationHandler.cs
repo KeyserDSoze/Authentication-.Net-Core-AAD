@@ -14,8 +14,8 @@ namespace AuthenticationCore.WebApp.ActiveDirectoryWithPolicies.Handlers
     /// <summary>
     /// Abstraction that represents an AuthorizationHandler. It's created to have one or more handlers at same time.
     /// </summary>
-    /// <typeparam name="TRequirement"></typeparam>
-    /// <typeparam name="TAttribute"></typeparam>
+    /// <typeparam name="TRequirement">Custom Requirement</typeparam>
+    /// <typeparam name="TAttribute">Custom Attribute</typeparam>
     public abstract class AttributeAuthorizationHandler<TRequirement, TAttribute> : AuthorizationHandler<TRequirement> where TRequirement : IAuthorizationRequirement where TAttribute : Attribute
     {
         protected override Task HandleRequirementAsync(AuthorizationHandlerContext context, TRequirement requirement)
